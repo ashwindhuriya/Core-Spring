@@ -1,0 +1,25 @@
+package com.springJDBC;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class JavaConfig {
+	@Bean("datasource")
+	public DriverManagerDataSource getDataSource() {
+		DriverManagerDataSource dataSrc = new DriverManagerDataSource();
+		dataSrc.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSrc.setUrl("jdbc:mysql://localhost/spring_jdbc");
+		dataSrc.setUsername("root");
+		dataSrc.setPassword("root@123");
+		
+		return dataSrc;
+	}
+	
+	@Bean("jdbc_template")
+	public JdbcTemplate getTemplate() {
+		JdbcTemplate template = new JdbcTemplate()
+	}
+}

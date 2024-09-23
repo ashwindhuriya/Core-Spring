@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:c="http://www.springframework.org/schema/c"
+        >
+        
+        <util:list id="best_friends" list-class="java.util.LinkedList">
+	        <value>Test 1</value>
+	        <value>Test 2</value>
+	        <value>Test 3</value>
+	    </util:list>
+	    
+	    <util:map id="fees" map-class="java.util.HashMap">
+	    	<entry key="Spring" value="8000" />
+	    	<entry key="Django" value="4000" />
+	    	<entry key="Hibernate" value="2000" />
+	    </util:map>
+        
+        <bean class="com.springcore.standalone.collections.Person" name="person">
+      		<property name="friends" ref="best_friends" />
+      		<property name="feeStructure" ref="fees" />
+      	</bean>
+</beans>

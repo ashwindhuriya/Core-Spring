@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:c="http://www.springframework.org/schema/c"
+        >
+        
+        <bean name="employee" class="com/springcore/collections/springcollection.xml">
+        	<property name="empName" value="Ashwin"></property>
+        	<property name="phones">
+        		<list>
+        			<value>36346435645</value>
+        			<value>456745457656</value>
+        			<value>8908946786</value>
+        			<value>7556735675</value>
+        		</list>
+        	</property>
+        	<property name="address">
+        		<set>
+        			<value>Mumbai</value>
+        			<value>Delhi</value>
+        			<value>Hyderabad</value>
+        			<value>Bangalore</value>
+        		</set>
+        	</property>
+        	<property name="courses">
+        		<map>
+        			<entry key="Node" value="1 months" />
+        			<entry key="Spring" value="2 months" />
+        			<entry key="Java" value="3 months" />
+        		</map>
+        	</property>
+        </bean>
+        	
+</beans>

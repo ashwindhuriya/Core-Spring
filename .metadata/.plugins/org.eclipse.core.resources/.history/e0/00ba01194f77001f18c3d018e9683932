@@ -1,0 +1,26 @@
+package com.springJDBC;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Program is Running ! ..." );
+        
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/springJDBC/config.xml");
+        JdbcTemplate template = context.getBean("jdbc_template", JdbcTemplate.class);
+        
+        String query = "insert into student(id, name, city) values(?, ?, ?)";
+        
+        int result = template.update(query, 23452, "Pranav C", "Goa");
+        
+        System.out.println("Number of record inserted ... " + result);
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd"
+		xmlns:p="http://www.springframework.org/schema/p"
+	    xmlns:c="http://www.springframework.org/schema/c"
+        >
+        
+        <util-list list-class="java.util.LinkedList" id="best_friends">
+        	<value>Test 1</value>
+      		<value>Test 2</value>
+      		<value>Test 3</value>
+        </util-list>
+
+      	<bean class="com.springcore.standalone.collections.Person" name="person">
+      		<property name="friends" ref="best_friends">
+      			<list>
+      				
+      			</list>
+      		</property>
+      	</bean>
+</beans>

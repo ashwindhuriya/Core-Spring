@@ -1,0 +1,19 @@
+package com.springcore.consinjection;
+
+public class Person {
+	private int personId;
+	private String personName;
+	private Certificate certificate;
+	
+	public Person(int personId, String personName, Certificate certificate) {
+		super();
+		this.personId = personId;
+		this.personName = personName;
+		this.certificate = certificate;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [personId=" + personId + ", personName=" + personName + ", certificate=" + certificate + "]";
+	}
+}
